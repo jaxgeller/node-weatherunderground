@@ -6,7 +6,6 @@ function Wunderground(key, city, state) {
   this.state = state || null;
 
   this.url = function(type, opts) {
-
     var city = opts.city || this.city;
     var state = opts.state || this.state;
     var key = opts.key || this.key;

@@ -8,6 +8,11 @@ var opts = {
   state: 'DC'
 }
 
+var opts2 = {
+  state: 'CA',
+  city: 'San_Francisco'
+}
+
 describe('Wunderground API', function() {
   it('.conditions', function(done) {
     client.conditions('', function(err, res) {
@@ -44,7 +49,7 @@ describe('Wunderground API', function() {
   });
   
   it('.forecast #opts', function(done) {
-    client.forecast(opts, function(err, res) {
+    client.forecast(opts2, function(err, res) {
       if (err) return done(err);
       res = res.txt_forecast.forecastday;
       res.should.be.an.array;
@@ -93,7 +98,7 @@ describe('Wunderground API', function() {
   });
 
   it('.hourly #opts', function(done) {
-    client.hourly(opts, function(err, res) {
+    client.hourly(opts2, function(err, res) {
       if (err) return done(err);
       res.should.be.an.array;
       res[0].should.have.property('FCTTIME');
