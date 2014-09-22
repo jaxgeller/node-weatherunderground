@@ -1,11 +1,16 @@
 var api = require('./api');
 
 function Wunderground(key, city, state) {
-  this.key = key;
-  this.city = city;
-  this.state = state;
-  this.url = function(type) {
-    return ['http://api.wunderground.com/api/', this.key, '/', type, '/q/', this.state, '/', this.city, '.json'].join('');
+  this.key = key || null;
+  this.city = city || null;
+  this.state = state || null;
+
+  this.url = function(type, opts) {
+
+    var city = opts.city || this.city;
+    var state = opts.state || this.state;
+    var key = opts.key || this.key;
+    return ['http://api.wunderground.com/api/', key, '/', type, '/q/', state, '/', city, '.json'].join('');
   }
 
   this.conditions = api.conditions;

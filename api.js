@@ -2,10 +2,11 @@ var helpers = require('./helpers');
 
 /**
  * Gets conditions for a specific location
+ * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
  */
-exports.conditions = function(done) {
-  helpers.get(this.url('conditions'), function(err, data) {
+exports.conditions = function(opts, done) {
+  helpers.get(this.url('conditions', opts), function(err, data) {
     if (err) return done(err);
     return done(null, data.current_observation);
   });
@@ -13,10 +14,11 @@ exports.conditions = function(done) {
 
 /**
  * Gets forecast for a specific location
+ * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
  */
-exports.forecast = function(done) {
-  helpers.get(this.url('forecast'), function(err, data) {
+exports.forecast = function(opts, done) {
+  helpers.get(this.url('forecast', opts), function(err, data) {
     if (err) return done(err);
     return done(null, data.forecast);
   });
@@ -24,10 +26,11 @@ exports.forecast = function(done) {
 
 /**
  * Gets forecast 10 days in advance for a specific location
+ * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
  */
-exports.forecast10day = function(done) {
-  helpers.get(this.url('forecast10day'), function(err, data) {
+exports.forecast10day = function(opts, done) {
+  helpers.get(this.url('forecast10day', opts), function(err, data) {
     if (err) return done(err);
     return done(null, data.forecast);
   });
@@ -35,10 +38,11 @@ exports.forecast10day = function(done) {
 
 /**
  * Gets hourly conditions for a specific location
+ * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
  */
-exports.hourly = function(done) {
-  helpers.get(this.url('hourly'), function(err, data) {
+exports.hourly = function(opts, done) {
+  helpers.get(this.url('hourly', opts), function(err, data) {
     if (err) return done(err);
     return done(null, data.hourly_forecast);
   });
@@ -46,10 +50,11 @@ exports.hourly = function(done) {
 
 /**
  * Gets hourly conditions 10 days in advance for a specific location
+ * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
  */
-exports.hourly10day = function(done) {
-  helpers.get(this.url('hourly10day'), function(err, data) {
+exports.hourly10day = function(opts, done) {
+  helpers.get(this.url('hourly10day', opts), function(err, data) {
     if (err) return done(err);
     return done(null, data.hourly_forecast);
   });
