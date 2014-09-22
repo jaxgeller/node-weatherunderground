@@ -3,31 +3,28 @@
 [![Build Status](https://travis-ci.org/jacksongeller/wunderground-api.svg)](https://travis-ci.org/jacksongeller/wunderground-api)
 
 
----
+
 # Install
 `$ npm install wunderground-api --save`
 
 
----
 # Use
 
 ```js
 var Wunderground = require('wunderground-api');
 var client = new Wunderground('your api key here', 'Washington', 'DC');
-// or
-
-var client = new Wunderground();
-
-/*
-  All of the parameters are optional at the point of init. you can supply them later in the API calls
- */
 ```
 
----
+All parameters are optional at the point of init, you can change them later by adding in an object
+
+```js
+var Wunderground = require('wunderground-api');
+var client = new Wunderground();
+```
+
 # Examples
 
 ```js
-// Classic init
 var Wunderground = require('wunderground-api');
 var client = new Wunderground('your api key here', 'Washington', 'DC');
 
@@ -42,8 +39,9 @@ client.hourly10day('', function(err, data) {
 });
 ```
 
+No config at the point of init
+
 ```js
-// No init
 var Wunderground = require('wunderground-api');
 var client = new Wunderground();
 var opts = {
@@ -62,9 +60,9 @@ client.hourly10day(opts, function(err, data) {
   else console.log(data);
 });
 ```
+Half init
 
 ```js
-// half init
 // opts will always overwrite init
 var Wunderground = require('wunderground-api');
 var client = new Wunderground('your api key here');
@@ -84,7 +82,7 @@ client.hourly10day(opts, function(err, data) {
 });
 ```
 
----
+
 # Api
 
 ## WundergroundClient(apiKey, city, state)
