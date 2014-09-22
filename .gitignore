@@ -3,3 +3,4 @@ node_modules
 *.swo
 *.swp
 *.sass-cache
+output.md

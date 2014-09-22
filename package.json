@@ -1,9 +1,9 @@
 {
   "name": "wunderground-api",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "",
+  "description": "Wundergroud Api wrapper for node",
+  "keywords": ["wunderground", "weather api", "weather underground", "underground api", "wunderground api"],
+  "main": "index.js",
   "dependencies": {
     "request": "^2.44.0"
   },
@@ -14,7 +14,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": "@JaxGeller",
   "license": "MIT",
   "repository": {
     "type": "git",
