@@ -16,7 +16,6 @@ var client = new Wunderground('your api key here', 'Washington', 'DC');
 ```
 
 All parameters are optional at the point of init, you can change them later by adding in an object
-
 ```js
 var Wunderground = require('wunderground-api');
 var client = new Wunderground();
@@ -60,10 +59,10 @@ client.hourly10day(opts, function(err, data) {
   else console.log(data);
 });
 ```
-Half init
+
+Half init, opts will always overwrite init
 
 ```js
-// opts will always overwrite init
 var Wunderground = require('wunderground-api');
 var client = new Wunderground('your api key here');
 var opts = {
@@ -83,7 +82,7 @@ client.hourly10day(opts, function(err, data) {
 ```
 
 
-# Api
+# Config Api
 
 ## WundergroundClient(apiKey, city, state)
 Init a new Wunderground client for API use, all params optional at init and can be overwritten
@@ -105,7 +104,7 @@ Optional object passed into API
 * **String** *state* - state
 
 
----
+# API
 
 ## conditions(opts, callback)
 
