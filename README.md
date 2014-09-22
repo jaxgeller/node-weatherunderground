@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/jacksongeller/wunderground-api.svg)](https://travis-ci.org/jacksongeller/wunderground-api)
 
----
 
+---
 # Install
 `$ npm install wunderground-api --save`
 
----
 
+---
 # Use
 
 ```js
@@ -17,7 +17,6 @@ var client = new Wunderground('your api key here', 'Washington', 'DC');
 ```
 
 ---
-
 # Examples
 
 ```js
@@ -35,8 +34,8 @@ client.hourly10day(function(err, data) {
 });
 ```
 
----
 
+---
 # Api
 
 ## WundergroundClient(apiKey, city, state)
