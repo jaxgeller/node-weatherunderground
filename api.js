@@ -1,5 +1,9 @@
 var helpers = require('./helpers');
 
+/**
+ * Gets conditions for a specific location
+ * @param  {Function} callback - returns err, data
+ */
 exports.conditions = function(done) {
   helpers.get(this.url('conditions'), function(err, data) {
     if (err) return done(err);
@@ -7,6 +11,10 @@ exports.conditions = function(done) {
   });
 }
 
+/**
+ * Gets forecast for a specific location
+ * @param  {Function} callback - returns err, data
+ */
 exports.forecast = function(done) {
   helpers.get(this.url('forecast'), function(err, data) {
     if (err) return done(err);
@@ -14,6 +22,10 @@ exports.forecast = function(done) {
   });
 }
 
+/**
+ * Gets forecast 10 days in advance for a specific location
+ * @param  {Function} callback - returns err, data
+ */
 exports.forecast10day = function(done) {
   helpers.get(this.url('forecast10day'), function(err, data) {
     if (err) return done(err);
@@ -21,6 +33,10 @@ exports.forecast10day = function(done) {
   });
 }
 
+/**
+ * Gets hourly conditions for a specific location
+ * @param  {Function} callback - returns err, data
+ */
 exports.hourly = function(done) {
   helpers.get(this.url('hourly'), function(err, data) {
     if (err) return done(err);
@@ -28,6 +44,10 @@ exports.hourly = function(done) {
   });
 }
 
+/**
+ * Gets hourly conditions 10 days in advance for a specific location
+ * @param  {Function} callback - returns err, data
+ */
 exports.hourly10day = function(done) {
   helpers.get(this.url('hourly10day'), function(err, data) {
     if (err) return done(err);
