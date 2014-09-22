@@ -13,7 +13,7 @@
 
 ```js
 var Wunderground = require('wunderground-api');
-var client = new Wunderground(process.env.PASSWORD, 'Washington', 'DC');
+var client = new Wunderground('your api key here', 'Washington', 'DC');
 ```
 
 ---
@@ -22,7 +22,7 @@ var client = new Wunderground(process.env.PASSWORD, 'Washington', 'DC');
 
 ```js
 var Wunderground = require('wunderground-api');
-var client = new Wunderground(process.env.PASSWORD, 'Washington', 'DC');
+var client = new Wunderground('your api key here', 'Washington', 'DC');
 
 client.conditions(function(err, data) {
   if (err) throw err;
