@@ -98,6 +98,17 @@ Init a new Wunderground client for API use, all params optional at init and can 
 
 * **String** *state* - state for weather data
 
+## Opts
+Optional object passed into API
+
+### Props
+* **String** *key* - wunderground key
+* **String** *city* - city
+* **String** *state* - state
+
+
+---
+
 ## conditions(opts, callback)
 
 Gets conditions for a specific location
