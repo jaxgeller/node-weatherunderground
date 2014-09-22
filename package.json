@@ -1,0 +1,23 @@
+{
+  "name": "wunderground-api",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "",
+  "dependencies": {
+    "request": "^2.44.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacksongeller/wunderground-api.git"
+  }
+}
