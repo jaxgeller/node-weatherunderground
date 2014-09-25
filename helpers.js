@@ -10,7 +10,7 @@ exports.get = function(url, done) {
         if (body.response.error) return done(new Error(body.response.error.description));
         else return done(null, body);
       } catch (e) {
-        return done(err);
+        return done(e);
       }
     }
   });
