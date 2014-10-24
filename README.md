@@ -1,11 +1,11 @@
 # wunderground-api
 
-[![Build Status](https://travis-ci.org/jacksongeller/wunderground-api.svg)](https://travis-ci.org/jacksongeller/wunderground-api)
+[![Build Status](https://travis-ci.org/jacksongeller/node-weatherunderground.svg)](https://travis-ci.org/jacksongeller/node-weatherunderground)
 
 
 
 # Install
-`$ npm install wunderground-api --save`
+`$ npm install node-weatherunderground --save`
 
 
 # Use
