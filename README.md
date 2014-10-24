@@ -1,4 +1,4 @@
-# wunderground-api
+# node-weatherunderground
 
 [![Build Status](https://travis-ci.org/jacksongeller/node-weatherunderground.svg)](https://travis-ci.org/jacksongeller/node-weatherunderground)
 
