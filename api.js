@@ -63,7 +63,7 @@ exports.hourly10day = function(opts, done) {
  * Gets severe weather alerts for a specific location
  * @param {Object} opts - optional object that bypasses initting a client
  * @param  {Function} callback - returns err, data
- * data is an empty array if no alerts for specified location exist
+ * data is an empty array if no current alerts for specified location exist
  */
 exports.alerts = function(opts, done) {
   helpers.get(this.url('alerts', opts), function(err, data) {
