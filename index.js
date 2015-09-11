@@ -17,5 +17,6 @@ function Wunderground(key, city, state) {
   this.forecast10day = api.forecast10day;
   this.hourly = api.hourly;
   this.hourly10day = api.hourly10day;
+  this.alerts = api.alerts;
 }
 module.exports = Wunderground;
