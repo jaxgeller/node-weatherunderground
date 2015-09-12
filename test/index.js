@@ -23,7 +23,7 @@ describe('Wunderground API', function() {
       res.should.have.property('feelslike_f');
       res.should.have.property('icon');
       return done();
-    });    
+    });
   });
 
   it('.conditions #opts', function(done) {
@@ -35,7 +35,7 @@ describe('Wunderground API', function() {
       res.should.have.property('feelslike_f');
       res.should.have.property('icon');
       return done();
-    });    
+    });
   });
 
   it('.forecast', function(done) {
@@ -45,9 +45,9 @@ describe('Wunderground API', function() {
       res.should.be.an.array;
       res[0].should.have.keys('period', 'icon', 'icon_url', 'title', 'fcttext', 'fcttext_metric', 'pop');
       return done();
-    }); 
+    });
   });
-  
+
   it('.forecast #opts', function(done) {
     client.forecast(opts2, function(err, res) {
       if (err) return done(err);
@@ -55,7 +55,7 @@ describe('Wunderground API', function() {
       res.should.be.an.array;
       res[0].should.have.keys('period', 'icon', 'icon_url', 'title', 'fcttext', 'fcttext_metric', 'pop');
       return done();
-    }); 
+    });
   });
 
   it('.forecast10day', function(done) {
@@ -68,7 +68,7 @@ describe('Wunderground API', function() {
       res[0].should.have.property('pop');
       res[0].should.have.property('high');
       return done();
-    }); 
+    });
   });
 
   it('.forecast10day #opts', function(done) {
@@ -81,7 +81,7 @@ describe('Wunderground API', function() {
       res[0].should.have.property('pop');
       res[0].should.have.property('high');
       return done();
-    }); 
+    });
   });
 
   it('.hourly', function(done) {
@@ -94,7 +94,7 @@ describe('Wunderground API', function() {
       res[0].should.have.property('feelslike');
       res[0].should.have.property('pop');
       return done();
-    }); 
+    });
   });
 
   it('.hourly #opts', function(done) {
@@ -107,7 +107,7 @@ describe('Wunderground API', function() {
       res[0].should.have.property('feelslike');
       res[0].should.have.property('pop');
       return done();
-    }); 
+    });
   });
 
   it('.hourly10day', function(done) {
@@ -121,9 +121,9 @@ describe('Wunderground API', function() {
       res[0].should.have.property('feelslike');
       res[0].should.have.property('pop');
       return done();
-    }); 
+    });
   });
-  
+
 
   it('.hourly10day #opts', function(done) {
     client.hourly10day(opts, function(err, res) {
@@ -136,6 +136,6 @@ describe('Wunderground API', function() {
       res[0].should.have.property('feelslike');
       res[0].should.have.property('pop');
       return done();
-    }); 
+    });
   });
 });

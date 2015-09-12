@@ -3,6 +3,4 @@ node_js:
 - '0.10'
 notifications:
   email: false
-env:
-  global:
-    secure: NG/UE2baEWJxo2w2SIXZVV1I433O3+OVyydEAoZ0J5qHsF93gDJv5tXyNWZgDwFwew54CrRjd6/m36pr/8QzE23lBkVSFWnvO242ez7Z0BWwRa9fh6a6V8gjqSmHIpXwN8/mLQrASOHFKzVvdDy1ljgCfnweWq/+NxRPvE0+4oo=
+
