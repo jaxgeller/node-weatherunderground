@@ -11,20 +11,20 @@
 # Use
 
 ```js
-var Wunderground = require('wunderground-api');
+var Wunderground = require('node-weatherunderground');
 var client = new Wunderground('your api key here', 'Washington', 'DC');
 ```
 
 All parameters are optional at the point of init, you can change them later by adding in an object
 ```js
-var Wunderground = require('wunderground-api');
+var Wunderground = require('node-weatherunderground');
 var client = new Wunderground();
 ```
 
 # Examples
 
 ```js
-var Wunderground = require('wunderground-api');
+var Wunderground = require('node-weatherunderground');
 var client = new Wunderground('your api key here', 'Washington', 'DC');
 
 client.conditions('', function(err, data) {
@@ -41,7 +41,7 @@ client.hourly10day('', function(err, data) {
 No config at the point of init
 
 ```js
-var Wunderground = require('wunderground-api');
+var Wunderground = require('node-weatherunderground');
 var client = new Wunderground();
 var opts = {
   key:'your api key here', 
@@ -63,7 +63,7 @@ client.hourly10day(opts, function(err, data) {
 Half init, opts will always overwrite init
 
 ```js
-var Wunderground = require('wunderground-api');
+var Wunderground = require('node-weatherunderground');
 var client = new Wunderground('your api key here');
 var opts = {
   city:'Washington', 
